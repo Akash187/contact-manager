@@ -1,4 +1,4 @@
-#[Contact Manager](https://contact-manager101.netlify.com/)
+# [Contact Manager](https://contact-manager101.netlify.com/)
 
 A simple contact manager with full CRUD Functionality and React's Context API. We will be storing the contacts in Local Storage.
 
