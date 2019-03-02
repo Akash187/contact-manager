@@ -26,3 +26,77 @@
     color: white;
     cursor: pointer;
 }
+
+.contacts{
+    padding: 0 0.6rem;
+}
+
+.contacts-header{
+    font-size: 2.4rem;
+    font-weight: 400;
+    padding: 0.6rem 0;
+}
+
+.contacts-header span{
+    color: red;
+}
+
+#cards{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, 360px);
+}
+
+.card{
+    padding: 0.4rem;
+    box-shadow: 1px 1px 1px 1px #888888;
+}
+
+.card-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.4rem 0;
+}
+
+.contact-name{
+    font-size: 1.6rem;
+    color: green;
+}
+
+.card-actions{
+    display: flex;
+}
+
+.card-actions div{
+    font-size: 1.2rem;
+    padding: 0 0.2rem;
+    cursor: pointer;
+}
+
+.contact-email{
+    font-size: 1.2rem;
+    padding: 0.4rem 0;
+    display: flex;
+}
+
+.contact-email span:first-child{
+    font-weight: 800;
+}
+
+.contact-mobileNumber{
+    font-size: 1.2rem;
+    padding: 0.8rem 0;
+}
+
+.contact-mobileNumber span:first-child{
+    font-weight: 800;
+}
+
+.truncate{
+    max-width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
