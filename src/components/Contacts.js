@@ -1,5 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {MyContext} from './contextAPI/MyProvider';
 
 const Contacts = (props) => {
   return(
@@ -8,20 +9,28 @@ const Contacts = (props) => {
         <span>Contact</span> List
       </div>
       <div id="cards">
-        <div className="card">
-          <div className="card-header">
-            <div className="contact-name truncate">Akash Kumar Seth fdghfdgfghfgndgfgdfg</div>
-            <div className="card-actions">
-              <div><FontAwesomeIcon icon="edit"/></div>
-              <div><FontAwesomeIcon icon="trash" color="red"/></div>
-            </div>
-          </div>
-          <div className="contact-email">
-            <span>Email : </span>
-            <div className="truncate">vks18765@gmail.comdfgdfgdgfgfhghrtttr</div>
-          </div>
-          <div className="contact-mobileNumber"><span>Mobile : +91</span>7408100293</div>
-        </div>
+        <MyContext.Consumer>
+          {(context) => (
+            <React.Fragment>
+              {context.state.contacts.map((contact) => (
+                <div className="card" key={contact.id}>
+                  <div className="card-header">
+                    <div className="contact-name truncate">{contact.name}</div>
+                    <div className="card-actions">
+                      <div><FontAwesomeIcon icon="edit"/></div>
+                      <div><FontAwesomeIcon icon="trash" color="red"/></div>
+                    </div>
+                  </div>
+                  <div className="contact-email">
+                    <span>Email : </span>
+                    <div className="truncate">{contact.email}</div>
+                  </div>
+                  <div className="contact-mobileNumber"><span>Mobile : +91</span>{contact.mobile}</div>
+                </div>
+              ))}
+            </React.Fragment>
+          )}
+        </MyContext.Consumer>
       </div>
     </div>
   )
