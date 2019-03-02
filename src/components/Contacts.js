@@ -5,7 +5,7 @@ import {MyContext} from './contextAPI/MyProvider';
 const Contacts = (props) => {
   return(
     <div className="contacts">
-      <div className="contacts-header">
+      <div className="page-title">
         <span>Contact</span> List
       </div>
       <div id="cards">
