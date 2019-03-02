@@ -13,7 +13,7 @@ const Contacts = (props) => {
         <MyContext.Consumer>
           {(context) => (
             <React.Fragment>
-              {context.state.contacts.map((contact) => (
+              {(context.state.contacts.length !== 0) ? context.state.contacts.map((contact) => (
                 <div className="card" key={contact.id}>
                   <div className="card-header">
                     <div className="contact-name truncate">{contact.name}</div>
@@ -30,7 +30,9 @@ const Contacts = (props) => {
                   </div>
                   <div className="contact-mobileNumber"><span>Mobile : +91</span>{contact.mobile}</div>
                 </div>
-              ))}
+              )):
+                <div className="no-contact-msg">No Contacts.</div>
+              }
             </React.Fragment>
           )}
         </MyContext.Consumer>

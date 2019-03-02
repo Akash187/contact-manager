@@ -31,6 +31,10 @@
     padding: 0 0.6rem;
 }
 
+.no-contact-msg{
+    font-size: 1.2rem;
+}
+
 .page-title{
     font-size: 2.4rem;
     font-weight: 400;
@@ -143,6 +147,19 @@ input[type=submit] {
 
 .registerbtn:hover {
     opacity: 1;
+}
+
+.about{
+    padding: 0.6rem;
+    font-size: 1.2rem;
+}
+
+.features{
+    margin-top: 0.8rem;
+}
+
+ul{
+    margin: 0.4rem;
 }
 
 

@@ -1,6 +1,16 @@
-##Contact Manager [Create React App](https://github.com/facebook/create-react-app).
+#[Contact Manager](https://github.com/facebook/create-react-app)
 
 A simple contact manager with full CRUD Functionality and React's Context API. We will be storing the contacts in Local Storage.
+
+##Features and Tools:
+1. React 
+2. React-router
+3. ContextAPI
+4. LocalStorage
+5. Responsive UI
+6. FontAwesome Icons
+7. Error Handling and Form Validation
+8. CSS Flexbox and Grid Used for responsive layout
 
 ## Available Scripts
 
