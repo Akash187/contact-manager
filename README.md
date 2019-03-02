@@ -2,7 +2,7 @@
 
 A simple contact manager with full CRUD Functionality and React's Context API. We will be storing the contacts in Local Storage.
 
-##Features and Tools:
+## Features and Tools:
 1. React 
 2. React-router
 3. ContextAPI
