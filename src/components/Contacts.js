@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {MyContext} from './contextAPI/MyProvider';
+import {NavLink} from 'react-router-dom';
 
 const Contacts = (props) => {
   return(
@@ -17,8 +18,10 @@ const Contacts = (props) => {
                   <div className="card-header">
                     <div className="contact-name truncate">{contact.name}</div>
                     <div className="card-actions">
-                      <div><FontAwesomeIcon icon="edit"/></div>
-                      <div><FontAwesomeIcon icon="trash" color="red"/></div>
+                      <NavLink className="navlink" to={'/edit/' + contact.id} action="Add">
+                        <div><FontAwesomeIcon icon="edit" color="black"/></div>
+                      </NavLink>
+                      <div><FontAwesomeIcon icon="trash" color="red" onClick={() => context.deleteContact(contact.id)}/></div>
                     </div>
                   </div>
                   <div className="contact-email">

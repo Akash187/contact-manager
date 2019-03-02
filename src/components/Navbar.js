@@ -13,7 +13,7 @@ const Navbar = (props) => {
           </NavLink>
         </div>
         <div>
-          <NavLink className="navlink" to="/add">
+          <NavLink className="navlink" to="/add" action="Add">
             <FontAwesomeIcon icon="plus"/>Add
           </NavLink>
         </div>

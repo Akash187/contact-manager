@@ -6,14 +6,18 @@ import Form from './../Form';
 import About from './../About';
 
 
-const Routes = () => (
+const Routes = (props) => (
   <BrowserRouter>
     <div>
       <Navbar/>
       <Switch>
         <Route exact path="/" component={Contacts}/>
-        <Route exact path="/add" component={Form}/>
-        <Route exact path="/edit/:id" component={Form}/>
+        <Route exact path="/add" render={(props) => (
+          <Form action="Add" history={props.history}/>
+        )}/>
+        <Route exact path="/edit/:id" render={(props) => (
+          <Form action="Update" id={props.match.params.id} history={props.history}/>
+        )}/>
         <Route exact path="/about" component={About}/>
       </Switch>
     </div>
