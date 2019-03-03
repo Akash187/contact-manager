@@ -116,6 +116,7 @@ a.navlink.active{
 .form{
     padding: 0 0.6rem;
     max-width: 480px;
+    width: 86%;
     font-size: 16px;
 }
 
